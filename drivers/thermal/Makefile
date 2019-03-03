@@ -63,3 +63,4 @@ obj-$(CONFIG_THERMAL_TSENS)	+= msm-tsens.o tsens2xxx.o tsens-dbg.o tsens-mtc.o t
 ifeq ($(RAINBOW_FEATURE_THERMAL_SWITCH),true)
 ccflags-$(CONFIG_THERMAL) := -DRAINBOW_FEATURE_THERMAL_SWITCH
 endif
+obj-$(CONFIG_MSM_THERMAL_SIMPLE) += msm_thermal_simple.o
