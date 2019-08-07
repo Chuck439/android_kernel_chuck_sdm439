@@ -60,6 +60,7 @@ struct sugov_policy {
 	struct task_struct *thread;
 	bool work_in_progress;
 
+	bool limits_changed;
 	bool need_freq_update;
 };
 
@@ -949,6 +950,7 @@ static int sugov_start(struct cpufreq_policy *policy)
 	sg_policy->last_freq_update_time = 0;
 	sg_policy->next_freq = 0;
 	sg_policy->work_in_progress = false;
+	sg_policy->limits_changed = false;
 	sg_policy->need_freq_update = false;
 	sg_policy->cached_raw_freq = 0;
 
@@ -1004,7 +1006,7 @@ static void sugov_limits(struct cpufreq_policy *policy)
 		mutex_unlock(&sg_policy->work_lock);
 	}
 
-	sg_policy->need_freq_update = true;
+	sg_policy->limits_changed = true;
 }
 
 static struct cpufreq_governor schedutil_gov = {
