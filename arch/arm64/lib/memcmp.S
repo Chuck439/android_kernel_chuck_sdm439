@@ -70,7 +70,6 @@
 #define result		w0
 
 /* Internal variables.  */
-ENTRY(memcmp)
 #define data1		x3
 #define data1w		w3
 #define data2		x4
