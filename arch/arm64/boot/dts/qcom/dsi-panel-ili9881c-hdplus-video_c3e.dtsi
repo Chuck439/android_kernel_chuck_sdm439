@@ -174,5 +174,7 @@
 		qcom,mdss-dsi-post-init-delay = <1>;
 		qcom,mdss-pan-physical-width-dimension = <62>;
 		qcom,mdss-pan-physical-height-dimension = <124>;
+		qcom,ulps-enabled;
+		qcom,suspend-ulps-enabled;
 	};
 };
