@@ -223,6 +223,7 @@ build_kernel() {
 	OBJDUMP=llvm-objdump OBJCOPY=llvm-objcopy STRIP=llvm-strip \
 	NM=llvm-nm AS=llvm-as AR=llvm-ar \
 	HOSTAR=llvm-ar HOSTAS=llvm-as HOSTNM=llvm-nm \
+	LD=ld.lld
 
 		BUILD_END=$(date +"%s")
 		DIFF=$((BUILD_END - BUILD_START))
