@@ -82,6 +82,7 @@ const char *selinux_policycap_names[__POLICYDB_CAPABILITY_MAX] = {
 	"nnp_nosuid_transition"
 };
 
+int selinux_android_netlink_getneigh;
 int selinux_policycap_netpeer;
 int selinux_policycap_openperm;
 int selinux_policycap_alwaysnetwork;
@@ -2012,6 +2013,7 @@ static void security_load_policycaps(void)
 				POLICYDB_CAPABILITY_NNP_NOSUID_TRANSITION);
 
 	selinux_android_netlink_route = policydb.android_netlink_route;
+	selinux_android_netlink_getneigh = policydb.android_netlink_getneigh;
 	selinux_nlmsg_init();
 
 	for (i = 0; i < ARRAY_SIZE(selinux_policycap_names); i++)
