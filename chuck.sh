@@ -36,7 +36,7 @@ err() {
 KERNEL_DIR=$PWD
 
 # The name of the Kernel, to name the ZIP
-ZIPNAME="Chuck.Kernel-SLMK"
+ZIPNAME="Chuck.Kernel-HENTAI"
 
 # The name of the device for which the kernel is built
 MODEL="Xiaomi Redmi SDM439 Series"
